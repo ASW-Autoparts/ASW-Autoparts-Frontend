@@ -6,7 +6,7 @@ const dataShopLanguages: ILanguage[] = [
         locale: 'en',
         code: 'en',
         name: 'English',
-        icon: '/images/languages/language-1.png',
+        icon: '../../public/images/languages/language-1.png',
         direction: 'ltr',
     },
     {
@@ -14,6 +14,13 @@ const dataShopLanguages: ILanguage[] = [
         code: 'ru',
         name: 'Russian',
         icon: '/images/languages/language-2.png',
+        direction: 'ltr',
+    },
+    {
+        locale: 'th',
+        code: 'th',
+        name: 'Thai',
+        icon: '../public/images/languages/language-2.png',
         direction: 'ltr',
     },
     {
