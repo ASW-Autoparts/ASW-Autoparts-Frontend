@@ -19,6 +19,7 @@ function DropdownLanguage() {
 
     const handleItemClick = async (item: Item) => {
         setLocale(item.language.locale);
+
     };
 
     const items: Item[] = useMemo(() => (
@@ -42,6 +43,7 @@ function DropdownLanguage() {
             title={language.code.toUpperCase()}
             items={items}
             onItemClick={handleItemClick}
+            
         />
     );
 }

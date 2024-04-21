@@ -39,6 +39,7 @@ function AccountMenu(props: Props) {
 
     return (
         <div className="account-menu" onSubmit={signInForm.submit}>
+            {/* Not login */}
             {user === null && (
                 <form className="account-menu__form">
                     <div className="account-menu__form-title">
@@ -49,6 +50,8 @@ function AccountMenu(props: Props) {
                             <FormattedMessage id={signInForm.serverError} />
                         </div>
                     )}
+
+                    
                     <div className="form-group">
                         <label htmlFor="header-signin-email" className="sr-only">
                             <FormattedMessage id="INPUT_EMAIL_ADDRESS_LABEL" />
@@ -71,6 +74,8 @@ function AccountMenu(props: Props) {
                             )}
                         </div>
                     </div>
+
+
                     <div className="form-group">
                         <label htmlFor="header-signin-password" className="sr-only">
                             <FormattedMessage id="INPUT_PASSWORD_LABEL" />
@@ -117,6 +122,9 @@ function AccountMenu(props: Props) {
                     </div>
                 </form>
             )}
+            {/* End Not login */}
+
+            {/* Already login */}
             {user !== null && (
                 <React.Fragment>
                     <AppLink href={url.accountDashboard()} className="account-menu__user" onClick={onCloseMenu}>
@@ -170,6 +178,7 @@ function AccountMenu(props: Props) {
                     </ul>
                 </React.Fragment>
             )}
+            {/* End Already login */}
         </div>
     );
 }

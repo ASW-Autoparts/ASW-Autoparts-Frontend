@@ -58,11 +58,11 @@ export function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="site-footer__bottom">
+            {/* <div className="site-footer__bottom">
                 <div className="container">
                     <div className="site-footer__bottom-row">
                         <div className="site-footer__copyright">
-                            {/* copyright */}
+
                             {'Powered by '}
                             <AppLink href="https://reactjs.org/" target="_blank" rel="noreferrer">React</AppLink>
                             {' / '}
@@ -71,14 +71,14 @@ export function Footer() {
                             <AppLink href={theme.author.profile_url} target="_blank" rel="noreferrer">
                                 {theme.author.name}
                             </AppLink>
-                            {/* copyright / end */}
+
                         </div>
                         <div className="site-footer__payments">
                             <AppImage src="/images/payments.png" />
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

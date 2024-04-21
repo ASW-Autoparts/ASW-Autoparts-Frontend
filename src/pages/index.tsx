@@ -37,8 +37,8 @@ function Page() {
 
     const blockZones = useMemo(() => [
         {
-            image: '/images/categories/category-overlay-1.jpg',
-            mobileImage: '/images/categories/category-overlay-1-mobile.jpg',
+            image: '/assets/images/code.svg',
+            mobileImage: './images/categories/category-overlay-1-mobile.jpg',
             categorySlug: 'tires-wheels',
         },
         {
@@ -95,6 +95,8 @@ function Page() {
             <BlockFinder />
             <BlockFeatures layout="top-strip" />
             <BlockSpace layout="divider-nl" />
+
+            {/* Item featured products */}
             <BlockProductsCarousel
                 blockTitle={intl.formatMessage({ id: 'HEADER_FEATURED_PRODUCTS' })}
                 layout="grid-5"
@@ -104,11 +106,13 @@ function Page() {
                 currentGroup={featuredProducts.tabs.find((x) => x.current)}
                 onChangeGroup={featuredProducts.handleTabChange}
             />
+
             <BlockSpace layout="divider-nl" />
             <BlockSale
                 products={blockSale.data}
                 loading={blockSale.isLoading}
             />
+
             <BlockSpace layout="divider-lg" />
 
             {blockZones.map((blockZone, blockZoneIdx) => (

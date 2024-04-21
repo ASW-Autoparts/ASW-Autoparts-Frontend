@@ -37,7 +37,7 @@ function Page() {
     const slides = useMemo(() => [
         {
             url: '/catalog/products',
-            desktopImage: '/images/slides/slide-3.jpg',
+            desktopImage: '/images/code.svg',
             mobileImage: '/images/slides/slide-3-mobile.jpg',
             offer: '30% OFF',
             title: 'When Buying Parts <br>With Installation',
@@ -123,6 +123,7 @@ function Page() {
         <React.Fragment>
             <BlockSpace layout="divider-xs" />
             <BlockSlideshow slides={slides} />
+
             <BlockSpace layout="divider-nl" />
             <BlockBrands
                 layout="columns-8-full"

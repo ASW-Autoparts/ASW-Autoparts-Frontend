@@ -1,8 +1,8 @@
 const theme = {
-    name: 'RedParts',
+    name: 'AWS-Autoparts',
     url: 'https://themeforest.net/item/redparts-auto-parts-react-ecommerce-template/28404847',
     author: {
-        name: 'Kos',
+        name: 'AWS-Autoparts',
         profile_url: 'https://themeforest.net/user/kos9',
     },
     contacts: {

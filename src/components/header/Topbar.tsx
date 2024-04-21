@@ -26,7 +26,7 @@ function Topbar(props: Props) {
             {layout === 'spaceship-start' && (
                 <React.Fragment>
                     <div className="topbar__item-text d-none d-xxl-flex">
-                        <FormattedMessage id="TEXT_TOPBAR_PHONE" values={{ phone: '(800) 060-0730' }} />
+                        <FormattedMessage id="TEXT_TOPBAR_PHONE" values={{ phone: '(+66) 02-539-5555' }} />
                     </div>
                     <div className="topbar__item-text">
                         <AppLink href={url.pageAboutUs()} className="topbar__link">

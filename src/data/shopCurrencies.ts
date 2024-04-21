@@ -26,6 +26,12 @@ const dataShopCurrencies: ICurrency[] = [
         name: 'Russian Ruble',
         rate: 64,
     },
+    {
+        code: 'THB',
+        symbol: '฿',
+        name: 'Thai Baht',
+        rate: 35,
+    },
 ];
 
 const dataShopDefaultCurrencyCode = 'USD';
