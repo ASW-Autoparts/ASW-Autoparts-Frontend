@@ -28,12 +28,14 @@ export function getDefaultLanguage(): ILanguage {
 
 // เอาค่า locale มาใส่เป็น path url from datashoplanguage เช่น /en, /th
 export function getLanguageByPath(path: string): ILanguage | null {
-    return getAllLanguages().find((language) => {
+    const matchedLanguage = getAllLanguages().find((language) => {
         const rg = new RegExp(`^\\/${language.locale}(\\/|$)`);
-
         return rg.test(path);
-    }) || null;
+    });
+
+    return matchedLanguage || null;
 }
+
 
 // get language locale value in datashoplanguage
 export function getLanguageByLocale(locale: string): ILanguage | null {

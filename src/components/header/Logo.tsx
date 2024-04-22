@@ -19,7 +19,7 @@ function Logo(props: Props) {
                 </div> */}
                 <div className="logo__image">
                     {/* logo */}
-                    <img src="images/awsLogo.svg" alt="AWS Logo" />
+                    <img src="/images/awsLogo.svg" alt="AWS Logo" />
                     {/* logo / end */}
                 </div>
             </AppLink>
