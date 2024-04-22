@@ -4,14 +4,18 @@ import { ILanguage } from '~/interfaces/language';
 // data
 import dataShopLanguages, { dataShopDefaultLocale } from '~/data/shopLanguages';
 
+// get data language
 export function getDefaultLocale(): string {
     return dataShopDefaultLocale;
 }
 
+// get interface
 export function getAllLanguages(): ILanguage[] {
     return dataShopLanguages;
+
 }
 
+// default language = en
 export function getDefaultLanguage(): ILanguage {
     const language = getAllLanguages().find((language) => language.locale === getDefaultLocale());
 
@@ -22,6 +26,7 @@ export function getDefaultLanguage(): ILanguage {
     return language;
 }
 
+// เอาค่า locale มาใส่เป็น path url from datashoplanguage เช่น /en, /th
 export function getLanguageByPath(path: string): ILanguage | null {
     return getAllLanguages().find((language) => {
         const rg = new RegExp(`^\\/${language.locale}(\\/|$)`);
@@ -30,10 +35,12 @@ export function getLanguageByPath(path: string): ILanguage | null {
     }) || null;
 }
 
+// get language locale value in datashoplanguage
 export function getLanguageByLocale(locale: string): ILanguage | null {
     return getAllLanguages().find((language) => language.locale === locale) || null;
 }
 
+// get translation from public/i18n
 async function loadTranslation(locale: string): Promise<Record<string, string>> {
     if (process.browser) {
         return fetch(baseUrl(`/i18n/${locale}.json`)).then((response) => response.json());
@@ -42,6 +49,7 @@ async function loadTranslation(locale: string): Promise<Record<string, string>> 
     return (await import(`../../../public/i18n/${locale}.json`)).default;
 }
 
+// if language match in public/i18n. let it trans
 export async function loadMessages(locale: string): Promise<Record<string, string>> {
     const baseMessages: ReturnType<typeof loadTranslation> = locale === getDefaultLocale()
         ? Promise.resolve({})

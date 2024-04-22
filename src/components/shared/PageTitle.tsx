@@ -12,9 +12,9 @@ function PageTitle(props: Props) {
     return (
         <Head>
             <title>
-                {title}
-                {title ? ' — ' : ''}
-                RedParts
+                {/* {title}
+                {title ? ' — ' : ''} */}
+                AWS
             </title>
         </Head>
     );

@@ -165,6 +165,7 @@
         font-weight: inherit;
         border: none;
         width: 100%;
+        
 
         @include direction {
             text-align: $inline-start;

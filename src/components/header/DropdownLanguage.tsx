@@ -43,7 +43,7 @@ function DropdownLanguage() {
             title={language.code.toUpperCase()}
             items={items}
             onItemClick={handleItemClick}
-            
+
         />
     );
 }

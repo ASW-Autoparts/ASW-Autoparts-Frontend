@@ -19,6 +19,8 @@ interface Props<T extends IDropdownItem> extends PropsWithChildren<{}> {
     onItemClick?: (item: T) => void;
 }
 
+console.log('wtf help');
+
 function Dropdown<T extends IDropdownItem>(props: Props<T>) {
     const {
         label,
@@ -32,8 +34,10 @@ function Dropdown<T extends IDropdownItem>(props: Props<T>) {
     const hasLabel = !!label;
     const hasTitle = !!title;
 
+
     const classes = classNames('topbar__item-button topbar__menu', {
         'topbar__menu--open': isOpen,
+
     });
 
     const handleButtonClick = () => {
@@ -68,6 +72,7 @@ function Dropdown<T extends IDropdownItem>(props: Props<T>) {
                 </span>
             </button>
             <div className="topbar__menu-body">
+
                 {items.map((item, index) => (
                     <button
                         key={index}
@@ -76,7 +81,7 @@ function Dropdown<T extends IDropdownItem>(props: Props<T>) {
                         onClick={() => handleItemClick(item)}
                     >
                         {!!item.image && (
-                            <AppImage src={item.image} alt={item.title} />
+                            <AppImage src={item.image}  />
                         )}
                         <span>{item.title}</span>
                     </button>

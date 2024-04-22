@@ -1,4 +1,3 @@
-// application
 import { ILanguage } from '~/interfaces/language';
 
 const dataShopLanguages: ILanguage[] = [
@@ -6,28 +5,28 @@ const dataShopLanguages: ILanguage[] = [
         locale: 'en',
         code: 'en',
         name: 'English',
-        icon: '../../public/images/languages/language-1.png',
+        icon: '/images/languages/language-1.svg',
         direction: 'ltr',
     },
     {
         locale: 'ru',
         code: 'ru',
         name: 'Russian',
-        icon: '/images/languages/language-2.png',
+        icon: '/images/languages/language-1.svg',
         direction: 'ltr',
     },
     {
         locale: 'th',
         code: 'th',
         name: 'Thai',
-        icon: '../public/images/languages/language-2.png',
+        icon: '/images/languages/language-1.svg',
         direction: 'ltr',
     },
     {
         locale: 'ar',
         code: 'ar',
         name: 'RTL',
-        icon: '/images/languages/language-3.png',
+        icon: '/images/languages/language-1.svg',
         direction: 'rtl',
     },
 ];
