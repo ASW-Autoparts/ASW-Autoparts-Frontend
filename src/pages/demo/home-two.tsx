@@ -37,7 +37,7 @@ function Page() {
     const slides = useMemo(() => [
         {
             url: '/catalog/products',
-            desktopImage: '/images/code.svg',
+            desktopImage: '/images/awsLogo.svg',
             mobileImage: '/images/slides/slide-3-mobile.jpg',
             offer: '30% OFF',
             title: 'When Buying Parts <br>With Installation',
