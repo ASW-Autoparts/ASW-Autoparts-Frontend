@@ -4,101 +4,109 @@
 import { IBrand } from '~/interfaces/brand';
 
 export const brands: IBrand[] = [
-    {
-        slug: 'aim-parts',
-        name: 'AimParts',
-        country: 'DE',
-        image: '/images/brands/brand-1.png',
-    },
+
     {
         slug: 'wind-engine',
-        name: 'WindEngine',
+        name: 'BMW',
         country: 'DE',
-        image: '/images/brands/brand-2.png',
+        image: '/images/brands/bmw.svg',
     },
     {
         slug: 'turbo-electric',
-        name: 'TurboElectric',
+        name: 'Benz',
         country: 'DE',
-        image: '/images/brands/brand-3.png',
+        image: '/images/brands/benz.svg',
+    },
+    {
+        slug: 'aim-parts',
+        name: 'Audi',
+        country: 'DE',
+        image: '/images/brands/audi.svg',
     },
     {
         slug: 'start-one',
-        name: 'StartOne',
+        name: 'Tesla',
         country: 'DE',
-        image: '/images/brands/brand-4.png',
-    },
-    {
-        slug: 'brandix',
-        name: 'Brandix',
-        country: 'DE',
-        image: '/images/brands/brand-5.png',
-    },
-    {
-        slug: 'abs-brand',
-        name: 'ABS-Brand',
-        country: 'DE',
-        image: '/images/brands/brand-6.png',
-    },
-    {
-        slug: 'great-circle',
-        name: 'GreatCircle',
-        country: 'DE',
-        image: '/images/brands/brand-7.png',
-    },
-    {
-        slug: 'just-romb',
-        name: 'JustRomb',
-        country: 'DE',
-        image: '/images/brands/brand-8.png',
-    },
-    {
-        slug: 'fast-wheels',
-        name: 'FastWheels',
-        country: 'DE',
-        image: '/images/brands/brand-9.png',
-    },
-    {
-        slug: 'stroyka-x',
-        name: 'Stroyka-X',
-        country: 'DE',
-        image: '/images/brands/brand-10.png',
-    },
-    {
-        slug: 'mission-51',
-        name: 'Mission-51',
-        country: 'DE',
-        image: '/images/brands/brand-11.png',
-    },
-    {
-        slug: 'fuel-corp',
-        name: 'FuelCorp',
-        country: 'DE',
-        image: '/images/brands/brand-12.png',
+        image: '/images/brands/tesla.svg',
     },
     {
         slug: 'red-gate',
-        name: 'RedGate',
+        name: 'Volkswagen',
         country: 'DE',
-        image: '/images/brands/brand-13.png',
+        image: '/images/brands/vw.svg',
     },
     {
-        slug: 'blocks',
-        name: 'Blocks',
+        slug: 'just-romb',
+        name: 'Peugeot',
         country: 'DE',
-        image: '/images/brands/brand-14.png',
+        image: '/images/brands/peugeot.svg',
     },
     {
         slug: 'blackbox',
-        name: 'BlackBox',
+        name: 'ford mustang',
         country: 'DE',
-        image: '/images/brands/brand-15.png',
+        image: '/images/brands/mustang.svg',
     },
     {
-        slug: 'square-garage',
-        name: 'SquareGarage',
+        slug: 'brandix',
+        name: 'Porsche',
         country: 'DE',
-        image: '/images/brands/brand-16.png',
+        image: '/images/brands/porsche.svg',
+    },
+    {
+        slug: 'abs-brand',
+        name: 'Lamborghini',
+        country: 'DE',
+        image: '/images/brands/lamborghini.svg',
+    },
+    {
+        slug: 'great-circle',
+        name: 'Maserati',
+        country: 'DE',
+        image: '/images/brands/maserati.svg',
+    },
+
+
+
+
+
+    {
+        slug: 'fast-wheels',
+        name: 'McLaren',
+        country: 'DE',
+        image: '/images/brands/mclaren.svg',
+    },
+    {
+        slug: 'stroyka-x',
+        name: 'Ferrari',
+        country: 'DE',
+        image: '/images/brands/ferrari.svg',
+    },
+    {
+        slug: 'mission-51',
+        name: 'Rolls-royce',
+        country: 'DE',
+        image: '/images/brands/rollsroyce.svg',
+    },
+    {
+        slug: 'fuel-corp',
+        name: 'bentley',
+        country: 'DE',
+        image: '/images/brands/bentley.svg',
+    },
+
+    {
+        slug: 'blocks',
+        name: 'aston martin',
+        country: 'DE',
+        image: '/images/brands/astonmartin.svg',
+    },
+
+    {
+        slug: 'square-garage',
+        name: 'corvette',
+        country: 'DE',
+        image: '/images/brands/corvette.svg',
     },
     {
         slug: 'sunset',

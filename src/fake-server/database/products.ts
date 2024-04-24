@@ -213,8 +213,8 @@ const productsDef: IProductDef[] = [
         sku: '140-10440-B',
         price: 19,
         images: [
-            '/images/products/product-1-1.jpg',
-            '/images/products/product-1-2.jpg',
+            '/images/brands/tesla.svg',
+            '/images/brands/bmw.svg',
         ],
         badges: ['sale', 'new', 'hot'],
         rating: 4,

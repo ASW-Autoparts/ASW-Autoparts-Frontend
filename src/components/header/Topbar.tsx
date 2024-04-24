@@ -33,16 +33,16 @@ function Topbar(props: Props) {
                             <FormattedMessage id="LINK_ABOUT_US" />
                         </AppLink>
                     </div>
-                    <div className="topbar__item-text">
+                    {/* <div className="topbar__item-text">
                         <AppLink href={url.pageContactUs()} className="topbar__link">
                             <FormattedMessage id="LINK_CONTACTS" />
                         </AppLink>
-                    </div>
-                    {/* <div className="topbar__item-text">
-                        <AppLink href={url.trackOrder()} className="topbar__link">
-                            <FormattedMessage id="LINK_TRACK_ORDER" />
-                        </AppLink>
                     </div> */}
+                    <div className="topbar__item-text">
+                        <AppLink href={url.pageTerms()} className="topbar__link">
+                        <FormattedMessage id="TERM_CONDITIONS" />
+                        </AppLink>
+                    </div>
                 </React.Fragment>
             )}
             {layout === 'classic' && (

@@ -4,6 +4,7 @@ import React, { PropsWithChildren } from 'react';
 import Head from 'next/head';
 
 import awslogo from '../../../public/images/awsLogo.svg'
+import AppImage from './AppImage';
 
 interface Props extends PropsWithChildren<{}> {}
 

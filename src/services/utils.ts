@@ -3,12 +3,14 @@ import { IBaseCategory, ICategory } from '~/interfaces/category';
 import { INavigation } from '~/interfaces/list';
 
 export function baseUrl(url: string): string {
+    const basePath = process.env.basePath || ''; // ใช้ค่าเริ่มต้นเป็น string ว่างถ้าไม่พบ basePath
     if (/^\/([^/]|$)/.test(url)) {
-        return `${process.env.basePath}${url}`;
+        return `${basePath}${url}`;
     }
 
     return url;
 }
+
 
 export function getCategoryPath<T extends IBaseCategory>(category: T | null | undefined): T[] {
     return category ? [...getCategoryPath(category.parent), category] : [];

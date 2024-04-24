@@ -1,5 +1,5 @@
 // react
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 // third-party
 import { FormattedMessage } from 'react-intl';
 import { useRouter } from 'next/router';
@@ -10,6 +10,7 @@ import VehicleSelect from '~/components/shared/VehicleSelect';
 import { baseUrl } from '~/services/utils';
 import { hrefToRouterArgs } from '~/services/router';
 import { IVehicle } from '~/interfaces/vehicle';
+import BlockSlides from '~/components/blocks/BlockSlides';
 
 function BlockFinder() {
     const router = useRouter();
@@ -31,13 +32,35 @@ function BlockFinder() {
         ).then();
     };
 
+    const slides = useMemo(
+        () => [
+            {
+                desktopImage: "/images/finder/finder-1.jpeg",
+                mobileImage: "/images/slides/slide-3-mobile.jpg",
+                offer: "30% OFF",
+            },
+            {
+                desktopImage: "/images/finder/finder-2.jpeg",
+                mobileImage: "/images/slides/slide-2-mobile.jpg",
+            },
+            {
+                desktopImage: "/images/finder/finder-3.jpeg",
+                mobileImage: "/images/slides/slide-1-mobile.jpg",
+            },
+        ],
+        []
+    );
+
     return (
         <div className="block block-finder">
+
             <Decor className="block-finder__decor" type="bottom" />
-            <div
-                className="block-finder__image"
-                style={{ backgroundImage: `url(${baseUrl('/images/finder.jpg')})` }}
-            />
+
+
+            <div className='block-finder__image'>
+            <BlockSlides  slides={slides}/>
+            </div>
+
             <div className="block-finder__body container container--max--xl">
                 <div className="block-finder__title">
                     <FormattedMessage id="TEXT_BLOCK_FINDER_TITLE" />
@@ -53,7 +76,11 @@ function BlockFinder() {
                     </button>
                 </form>
             </div>
+
         </div>
+
+
+
     );
 }
 

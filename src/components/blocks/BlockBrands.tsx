@@ -17,7 +17,7 @@ function BlockBrands(props: Props) {
 
     return (
         <div className={`block block-brands block-brands--layout--${layout}`}>
-            <div className="container">
+            <div className="container ">
                 <ul className="block-brands__list">
                     {brands.map((brand, brandIdx) => (
                         <React.Fragment key={brandIdx}>

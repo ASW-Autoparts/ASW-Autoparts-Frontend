@@ -13,6 +13,7 @@ import BlockProductsColumns from '~/components/blocks/BlockProductsColumns';
 import BlockSale from '~/components/blocks/BlockSale';
 import BlockSpace from '~/components/blocks/BlockSpace';
 import BlockZone from '~/components/blocks/BlockZone';
+import BlockWelcome from '~/components/blocks/BlockWelcome';
 import url from '~/services/url';
 import { shopApi, blogApi } from '~/api';
 import { useDeferredData, useProductColumns, useProductTabs } from '~/services/hooks';
@@ -93,7 +94,16 @@ function Page() {
     return (
         <React.Fragment>
             <BlockFinder />
-            <BlockFeatures layout="top-strip" />
+            <BlockBrands
+                layout="columns-8-full mt-5 mb-5"
+                brands={brands.data}
+            />
+
+            <BlockWelcome />
+
+
+            {/* <BlockFeatures layout="top-strip" /> */}
+
             <BlockSpace layout="divider-nl" />
 
             <BlockProductsCarousel
@@ -145,10 +155,7 @@ function Page() {
                 links={latestPostsLinks}
             />
             <BlockSpace layout="divider-nl" />
-            <BlockBrands
-                layout="columns-8-full"
-                brands={brands.data}
-            />
+
             <BlockSpace layout="divider-nl" className="d-xl-block d-none" />
             <BlockProductsColumns columns={columns} />
             <BlockSpace layout="before-footer" />
