@@ -5,7 +5,7 @@ module.exports = {
     },
     basePath: process.env.BASE_PATH || '',
     i18n: {
-        locales: ['en', 'ru', 'ar', 'th'],
+        locales: ['en', 'ru', 'ar',  ],
         defaultLocale: 'en',
     },
 };

@@ -40,7 +40,7 @@ function Topbar(props: Props) {
                     </div> */}
                     <div className="topbar__item-text">
                         <AppLink href={url.pageTerms()} className="topbar__link">
-                        <FormattedMessage id="TERM_CONDITIONS" />
+                        {/* <FormattedMessage id="TERM_CONDITIONS" /> */}
                         </AppLink>
                     </div>
                 </React.Fragment>

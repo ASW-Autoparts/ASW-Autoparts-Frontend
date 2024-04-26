@@ -12,6 +12,7 @@
     height: 500px;
     display: flex;
     position: relative;
+    transition: opacity 1000ms ease-in-out;
 
     left: 0;
     right: 0;
@@ -34,6 +35,8 @@
     top: 0;
     background-size: cover;
     opacity: .60;
+    transition: opacity 10000ms ease-in-out;
+
 
 }
 

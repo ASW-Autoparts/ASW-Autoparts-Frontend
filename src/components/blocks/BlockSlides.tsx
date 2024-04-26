@@ -22,11 +22,12 @@ const slickSettings: ISlickProps = {
     dots: false,
     arrows: false,
     infinite: true,
-    speed: 400,
+    speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
+   
 };
 
 export default function BlockSlides(props : Props) {
@@ -48,6 +49,14 @@ export default function BlockSlides(props : Props) {
                                     style={{ backgroundImage: `url(${baseUrl(slide.desktopImage)})` }}
                                 />
                                 <span
+                                    className={classNames(
+                                        'block-slideshow__item-image',
+                                        'block-slideshow__item-image--mobile',
+                                        'reflect-rtl',
+                                    )}
+                                    style={{ backgroundImage: `url(${baseUrl(slide.mobileImage)})` }}
+                                />
+                                 <span
                                     className={classNames(
                                         'block-slideshow__item-image',
                                         'block-slideshow__item-image--mobile',
