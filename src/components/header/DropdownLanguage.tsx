@@ -19,7 +19,8 @@ function DropdownLanguage() {
 
     const handleItemClick = async (item: Item) => {
         setLocale(item.language.locale);
-
+        await new Promise((r) => setTimeout(r, 100));
+        window.location.reload();
     };
 
     const items: Item[] = useMemo(() => (

@@ -13,7 +13,7 @@ import { getDefaultLanguage, getLanguageByPath } from '~/services/i18n/utils';
 
 class MyDocument extends Document {
     render() {
-        const language = getLanguageByPath(this.props.dangerousAsPath) || getDefaultLanguage();
+        const language = getLanguageByPath(this.props.canonicalBase) || getDefaultLanguage();
         const lang = language.locale;
         const dir = language.direction;
 

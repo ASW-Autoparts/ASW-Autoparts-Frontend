@@ -14,7 +14,7 @@ import BlockSale from '~/components/blocks/BlockSale';
 import BlockSpace from '~/components/blocks/BlockSpace';
 import BlockZone from '~/components/blocks/BlockZone';
 import BlockWelcome from '~/components/blocks/BlockWelcome';
-import vehiclesList from '~/components/vehicleLists';
+
 import url from '~/services/url';
 import { shopApi, blogApi } from '~/api';
 import { useDeferredData, useProductColumns, useProductTabs } from '~/services/hooks';
@@ -95,13 +95,14 @@ function Page() {
     return (
         <React.Fragment>
             <BlockFinder />
+
             <BlockBrands
                 layout="columns-8-full mt-5 mb-5"
                 brands={brands.data}
             />
 
             <BlockWelcome />
-            <vehiclesList />
+
 
 
             {/* <BlockFeatures layout="top-strip" /> */}

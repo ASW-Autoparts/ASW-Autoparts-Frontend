@@ -12,9 +12,10 @@ import {
     getVehicles,
     getYears,
     removeUserVehicles,
-} from '~/fake-server/endpoints';
+} from '~/fake-server/endpoints/vehicles';
 
 export class FakeVehicleApi extends VehicleApi {
+    
     getYears(): Promise<number[]> {
         return getYears();
     }
