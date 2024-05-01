@@ -75,11 +75,6 @@ function AppLink(props: Props) {
         );
     }
 
-    console.log(data.href);
-    console.log(data.as);
-
-    console.log(anchorProps);
-
     return (
         <Link legacyBehavior {...data}>
             <a {...anchorProps}>{children}</a>

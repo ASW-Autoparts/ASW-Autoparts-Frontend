@@ -77,7 +77,6 @@ export default function useVehicleForm(options: IOptions = {}) {
         const fetchVehicles = async () => {
             try {
                 const response = await axios.get('http://localhost:3001/api/vehicles');
-                console.log(response.data);  // แสดงข้อมูลที่ได้รับ
                 setVehicles(response.data);
             } catch (error) {
                 console.error('Error:', error);

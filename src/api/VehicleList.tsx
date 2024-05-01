@@ -12,10 +12,8 @@ const VehicleList: React.FC = () => {
         const fetchVehicles = async () => {
             try {
                 const response = await axios.get('http://localhost:3001/api/vehicles');
-                console.log(response.data);  // แสดงข้อมูลที่ได้รับ
                 setVehicles(response.data);
             } catch (error) {
-                console.error('Error:', error);
                 setError(error.message);
             } finally {
                 setLoading(false);

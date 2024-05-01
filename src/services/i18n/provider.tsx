@@ -27,14 +27,6 @@ const cache: Record<string, Promise<Record<string, string>>> = {};
 export async function getLanguageInitialProps(language: ILanguage | null): Promise<ILanguageProviderProps> {
     const locale = language ? language.locale : getDefaultLocale();
 
-    if (process.browser) {
-        if (!cache[locale]) {
-            cache[locale] = loadMessages(locale);
-        }
-
-        return { messages: await cache[locale] };
-    }
-
     return {
         messages: await loadMessages(locale),
     };
