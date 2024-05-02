@@ -12,7 +12,6 @@ export function getDefaultLocale(): string {
 // get interface
 export function getAllLanguages(): ILanguage[] {
     return dataShopLanguages;
-
 }
 
 // default language = en
@@ -35,7 +34,6 @@ export function getLanguageByPath(path: string): ILanguage | null {
 
     return matchedLanguage || null;
 }
-
 
 // get language locale value in datashoplanguage
 export function getLanguageByLocale(locale: string): ILanguage | null {

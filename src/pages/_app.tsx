@@ -113,7 +113,7 @@ App.getInitialProps = wrapper.getInitialAppProps((store) => async (context: AppC
         mobileHeaderVariant: config.mobileHeaderVariant,
     }));
 
-    const language = getLanguageByLocale(context.router.locale!);
+    const language = getLanguageByLocale(context.ctx.locale!);
 
     return {
         ...(await AppBase.getInitialProps(context)),
