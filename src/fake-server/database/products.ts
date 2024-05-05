@@ -208,7 +208,7 @@ function makeProducts(defs: IProductDef[]): IProduct[] {
 
 const productsDef: IProductDef[] = [
     {
-        name: 'Brandix Spark Plug Kit ASR-400',
+        name: 'debug test',
         slug: 'brandix-spark-plug-kit-asr-400',
         sku: '140-10440-B',
         price: 19,
