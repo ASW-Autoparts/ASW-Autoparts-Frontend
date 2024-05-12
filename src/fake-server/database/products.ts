@@ -1,6 +1,11 @@
 /* eslint-disable import/prefer-default-export */
 
+
 // application
+
+import React, { useEffect, useState } from "react";
+import Products from "~/services/api/products"
+
 import { brands } from '~/fake-server/database/brands';
 import { IBrand } from '~/interfaces/brand';
 import { IProduct, IProductAttribute } from '~/interfaces/product';
@@ -55,6 +60,7 @@ function resolveProductAttributesDef(attributesDef: IProductAttributesDef): IPro
 }
 
 function makeProducts(defs: IProductDef[]): IProduct[] {
+
     return defs.map((def) => {
         let badges: string[] = [];
 
@@ -210,6 +216,26 @@ const productsDef: IProductDef[] = [
     {
         name: 'Brandix Spark Plug Kit ASR-400',
         slug: 'brandix-spark-plug-kit-asr-400',
+        sku: '140-10440-B',
+        price: 19,
+        images: [
+            '/images/brands/tesla.svg',
+            '/images/brands/bmw.svg',
+        ],
+        badges: ['sale', 'new', 'hot'],
+        rating: 4,
+        reviews: 3,
+        availability: 'in-stock',
+        compatibility: [1, 2],
+        attributes: {
+            Color: 'White',
+        },
+    },
+
+
+    {
+        name: 'test',
+        slug: 'test',
         sku: '140-10440-B',
         price: 19,
         images: [

@@ -15,6 +15,7 @@ import BlockSpace from '~/components/blocks/BlockSpace';
 import BlockZone from '~/components/blocks/BlockZone';
 import BlockWelcome from '~/components/blocks/BlockWelcome';
 import VehicleList from '~/components/VehicleList';
+import ProductList from '~/components/productList';
 
 import url from '~/services/url';
 import { shopApi, blogApi } from '~/api';
@@ -102,6 +103,8 @@ function Page() {
                 brands={brands.data}
             />
             <VehicleList />
+
+            <ProductList />
 
             <BlockWelcome />
 
