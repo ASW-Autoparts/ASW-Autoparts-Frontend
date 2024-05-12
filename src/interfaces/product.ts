@@ -67,7 +67,7 @@ export type IProductStock = 'in-stock' | 'out-of-stock' | 'on-backorder';
 
 export type IProductCompatibilityResult = 'all' | 'fit' | 'not-fit' | 'unknown';
 
-export interface IProduct {
+export default interface IProduct {
     id: number;
     name: string;
     /**

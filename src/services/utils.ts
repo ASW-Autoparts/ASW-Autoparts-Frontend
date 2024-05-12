@@ -3,7 +3,7 @@ import { IBaseCategory, ICategory } from '~/interfaces/category';
 import { INavigation } from '~/interfaces/list';
 
 export function baseUrl(url: string): string {
-    const basePath = process.env.basePath || ''; // ใช้ค่าเริ่มต้นเป็น string ว่างถ้าไม่พบ basePath
+    const basePath = process.env.BASE_PATH || '';
     if (/^\/([^/]|$)/.test(url)) {
         return `${basePath}${url}`;
     }

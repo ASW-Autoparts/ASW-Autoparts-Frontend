@@ -1,6 +1,8 @@
 // react
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // application
+import { collection, getDocs } from 'firebase/firestore';
+
 import BlockHeader from '~/components/blocks/BlockHeader';
 import BlockMap from '~/components/blocks/BlockMap';
 import BlockSpace from '~/components/blocks/BlockSpace';
@@ -8,7 +10,25 @@ import PageTitle from '~/components/shared/PageTitle';
 // data
 import theme from '~/data/theme';
 
+import db from '~/services/firebase';
+
 function Page() {
+    const [todos] = useState([]);
+
+    const fetchPost = async () => {
+        await getDocs(collection(db, 'vehicles'))
+            .then((querySnapshot) => {
+                const newData = querySnapshot.docs
+                    .map((doc) => ({ ...doc.data(), id: doc.id }));
+                // setTodos(newData);
+                console.log('Eit X', todos, newData);
+            });
+    };
+
+    useEffect(() => {
+        fetchPost();
+    }, []);
+
     return (
         <React.Fragment>
             <PageTitle>Contact Us</PageTitle>
